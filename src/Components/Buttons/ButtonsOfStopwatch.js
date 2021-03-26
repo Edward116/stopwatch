@@ -17,7 +17,7 @@ const Buttons = (props) => {
 
             {(props.state === 1) ?
                 <div>
-                    <button onClick={props.reset}>Reset</button>
+                    <button onClick={props.reset}>Pause</button>
                     <button onClick={props.stop}>Stop</button>
                 </div> : ""
             }
