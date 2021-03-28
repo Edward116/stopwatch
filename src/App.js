@@ -47,7 +47,7 @@ const App = () =>{
     }
 
 
-    const pause = () => {
+    const reset = () => {
         setTime({h: 0, m: 0, s: 0});
     }
 
@@ -56,7 +56,7 @@ const App = () =>{
         <div className='container'>
             <div className="App">
                 <Display time={time}/>
-                <Buttons reset={pause} stop={stop} start={start} state={state}/>
+                <Buttons reset={reset} stop={stop} start={start} state={state}/>
             </div>
         </div>
     );
