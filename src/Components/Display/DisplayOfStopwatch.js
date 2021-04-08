@@ -1,17 +1,16 @@
 import React from 'react'
-/*import {rxConnect} from "rx-connect";
-import * as Rx from "rxjs";*/
-
-
-
 
 
 const Display = (props) => {
-    return(
+    let seconds = props.time % 60;
+    let minutes = Math.floor(props.time / 60) % 60;
+    let hours = Math.floor(props.time / 3600)
+
+    return (
         <div className='display'>
-            <span>{(props.time.h >= 10) ? props.time.h : '0' + props.time.h}</span>:
-            <span>{(props.time.m >= 10) ? props.time.m : '0' + props.time.m}</span>:
-            <span>{(props.time.s >= 10) ? props.time.s : '0' + props.time.s}</span>
+            <span>{(hours >= 10) ? hours : '0' + hours}</span>:
+            <span>{(minutes >= 10) ? minutes : '0' + minutes}</span>:
+            <span>{(seconds >= 10) ? seconds : '0' + seconds}</span>
         </div>
     );
 }
